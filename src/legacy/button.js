@@ -63,8 +63,9 @@ function renderButton(id, { container, locale, type, color, shape, size }) : Zal
     });
 }
 
-// eslint-disable-next-line flowtype/no-mutable-array
-export function renderButtons(id : string, buttons : Array<Object>) : ZalgoPromise<Array<Object>> {
+
+// $FlowFixMe
+export function renderButtons(id : string, buttons : Array<Object>) : ZalgoPromise<Array<Object>> { // eslint-disable-line flowtype/no-mutable-array
 
     return ZalgoPromise.map(buttons, button => {
         return ZalgoPromise.try(() => {
